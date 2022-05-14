@@ -22,9 +22,10 @@ function listTitles(shelfContent) {
   return bookTitles
 }
 function searchShelf(genreShelf, bookTitle) {
-  Boolen (genreShelf.filter(function(a){
+  var onShelf = Boolean(genreShelf.find(function(a){
     return a.title === bookTitle
   }))
+  return onShelf
 }
 module.exports = {
   shelfBook,
